@@ -1,0 +1,75 @@
+.welcomeBackground {
+  background-image: url("../../resource/background3.png");
+  width: 100vw;
+  height: 100vh;
+  background-size: cover;
+  /* 背景图垂直、水平均居中 */
+  background-position: center center;
+  /* 当内容高度大于图片高度时，背景图像的位置相对于viewport固定 */
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+}
+.welcomeBackground .welcomebgContent {
+  font-size: 14pt;
+  width: 100vw;
+  height: 100vh;
+  color: #1b0460;
+}
+.welcomeBackground .welcomebgContent .wechatId {
+  font-size: 16pt;
+  font-weight: bolder;
+  padding-left: 8vw;
+  padding-top: 26vh;
+}
+.welcomeBackground .welcomebgContent .niceMeet {
+  padding-left: 8vw;
+}
+.welcomeBackground .welcomebgContent .wishRs {
+  /* 心愿收据 */
+  font-size: 24pt;
+  font-weight: bolder;
+  padding-left: 8vw;
+  padding-top: 12vh;
+  font-family: 'FZFengYaSongS-GB';
+  font-style: normal;
+  line-height: 56px;
+  color: #0F3A60;
+  width: 192px;
+  height: 56px;
+}
+.welcomeBackground .welcomebgContent .Regarding2023 {
+  padding-left: 8vw;
+}
+.welcomeBackground .welcomebgContent .wishButton {
+  box-sizing: border-box;
+  width: 80%;
+  height: 50px;
+  left: 10vw;
+  margin-top: 10vh;
+  background: rgba(255, 255, 255, 0.5);
+  border: 1.5px solid #333333;
+  border-radius: 10px;
+}
+.welcomeBackground .welcomebgContent .wishButton .iWish {
+  /* 我要许愿 */
+  position: center;
+  width: 100px;
+  height: 25px;
+  font-family: 'PingFang SC';
+  font-style: normal;
+  font-weight: 400px;
+  font-size: 18px;
+  line-height: 25px;
+  text-align: center;
+  color: #0F3A60;
+}
+.welcomeBackground .welcomebgContent .groupName {
+  position: absolute;
+  font-size: 10pt;
+  text-align: right;
+  bottom: 5%;
+  right: 5%;
+}
+.welcomeBackground .welcomebgContent .groupName .gnbord {
+  font-weight: bolder;
+}

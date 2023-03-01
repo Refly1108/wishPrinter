@@ -1,0 +1,464 @@
+.inputBackground {
+  background-image: url("../../resource/main.png");
+  width: 100vw;
+  height: 100vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.inputBackground .inputWishTitle {
+  /* 请输入你的愿望 */
+  position: absolute;
+  padding-left: 13vw;
+  width: 200px;
+  height: 28px;
+  padding-top: 26vh;
+  font-family: 'PingFang SC';
+  font-style: normal;
+  font-weight: 300;
+  font-size: 20px;
+  line-height: 28px;
+  /* identical to box height */
+  color: #0F3A60;
+}
+.inputBackground textarea {
+  box-sizing: border-box;
+  position: absolute;
+  width: 74vw;
+  height: 30vh;
+  resize: none;
+  margin-top: 31vh;
+  margin-left: 13vw;
+  background: rgba(255, 255, 255, 0.74);
+  border: 1px solid #fbd632;
+  border-radius: 10px;
+  font-family: "PingFang HK";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 28px;
+  scrollbar-width: none;
+  overflow: hidden;
+  color: #444444;
+}
+.inputBackground .wordinglimit {
+  /* 9/64 */
+  position: absolute;
+  height: 19px;
+  right: 15vw;
+  bottom: 40vh;
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  /* identical to box height */
+  color: #0F3A60;
+}
+.inputBackground .ChatGPTbtn {
+  /* 没有头绪？问问ChatGPT吧 */
+  background: none;
+  border: none;
+  color: blue;
+  cursor: pointer;
+  text-decoration: none;
+  position: absolute;
+  height: 20px;
+  margin-left: 13vw;
+  bottom: 34vh;
+  font-family: 'PingFang HK';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  /* identical to box height */
+  text-decoration-line: underline;
+  color: #0F3A60;
+}
+.inputBackground .ChatGPTbtn:hover {
+  text-decoration: underline;
+}
+.inputBackground .flower {
+  background-image: url("../../resource/flower.png");
+  position: absolute;
+  background-size: 100% 100%;
+  width: 74px;
+  height: 73px;
+  top: 500px;
+  left: 20px;
+}
+.inputBackground .printWish {
+  box-sizing: border-box;
+  position: absolute;
+  width: 74vw;
+  height: 50px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  left: 13vw;
+  bottom: 23vh;
+  background: rgba(255, 255, 255, 0.5);
+  border: 1.5px solid #333333;
+  border-radius: 10px;
+}
+.inputBackground .printWish .btnPrintWording {
+  /* 打印愿望 */
+  width: 150px;
+  height: 25px;
+  font-family: 'PingFang HK';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 25px;
+  text-align: center;
+  color: #0F3A60;
+}
+.inputBackground .back {
+  position: absolute;
+  width: 60px;
+  height: 25px;
+  bottom: 15.5vh;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: "PingFang HK";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 25px;
+  text-align: center;
+  color: #333333;
+}
+.inputBackground .mask {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.5);
+}
+.inputBackground .pop1 {
+  width: 80%;
+  overflow: hidden;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  margin: auto;
+  border-radius: 20px;
+  background-color: #fff;
+  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  width: 323px;
+  height: 300px;
+}
+.inputBackground .pop1 .content {
+  position: absolute;
+  width: 283px;
+  height: 72px;
+  left: 50px;
+  top: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  outline: 1px;
+  text-align: center;
+  max-width: 225px;
+  max-height: 4.3em;
+  font-size: 20px;
+  font-family: 'PingFang HK';
+  line-height: 36px;
+  text-overflow: ellipsis;
+  color: #333333;
+}
+.inputBackground .pop1 .i_know {
+  box-sizing: border-box;
+  text-align: center;
+  font-size: 16px;
+  width: 271px;
+  height: 50px;
+  margin-top: 170px;
+  margin-left: 26px;
+  border-radius: 10px;
+  background: #0F3A60;
+  font-family: "Roboto";
+  font-style: normal;
+  line-height: 19px;
+  font-weight: 400;
+  /* identical to box height */
+  color: #FFFFFF;
+}
+.inputBackground .pop1 .later {
+  line-height: 23px;
+  margin-top: 3vh;
+  text-align: center;
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  /* identical to box height */
+  color: #0F3A60;
+}
+.inputBackground .pop2 {
+  width: 80%;
+  overflow: hidden;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  margin: auto;
+  border-radius: 20px;
+  background-color: #fff;
+  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  width: 323px;
+  height: 300px;
+}
+.inputBackground .pop2 .loading {
+  position: absolute;
+  width: 283px;
+  height: 72px;
+  left: 50px;
+  top: 90px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  outline: 1px;
+  text-align: center;
+  max-width: 225px;
+  max-height: 4.3em;
+  font-size: 20px;
+  font-weight: 400;
+  font-family: 'PingFang HK';
+  line-height: 36px;
+  text-overflow: ellipsis;
+  color: #333333;
+}
+.inputBackground .pop2 .printing {
+  background-image: url("../../resource/Loading.png");
+  background-size: 100% 100%;
+  width: 162px;
+  height: 8px;
+  width: 160.09px;
+  height: 5.34px;
+  margin-left: 83px;
+  margin-top: 160px;
+}
+.inputBackground .pop3 {
+  width: 80%;
+  overflow: hidden;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  margin: auto;
+  border-radius: 20px;
+  background-color: #fff;
+  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  width: 323px;
+  height: 280px;
+}
+.inputBackground .pop3 .content {
+  position: absolute;
+  width: 283px;
+  height: 72px;
+  left: 50px;
+  top: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  outline: 1px;
+  text-align: center;
+  max-width: 225px;
+  max-height: 4.3em;
+  font-size: 20px;
+  font-family: 'PingFang HK';
+  line-height: 36px;
+  text-overflow: ellipsis;
+  color: #333333;
+}
+.inputBackground .pop3 .backToWelcome {
+  box-sizing: border-box;
+  text-align: center;
+  font-size: 16px;
+  width: 271px;
+  height: 50px;
+  margin-top: 170px;
+  margin-left: 26px;
+  border-radius: 10px;
+  background: #0F3A60;
+  font-family: "Roboto";
+  font-style: normal;
+  line-height: 19px;
+  font-weight: 400;
+  /* identical to box height */
+  color: #FFFFFF;
+}
+.inputBackground .pop4 {
+  width: 80%;
+  overflow: hidden;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  margin: auto;
+  border-radius: 8px;
+  background-color: #fff;
+  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  /* Rectangle 14 */
+  width: 323px;
+  height: 330px;
+  background: #FFFFFF;
+  border-radius: 20px;
+}
+.inputBackground .pop4 .randomWish {
+  margin: 0 auto;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 25px;
+  line-height: 36px;
+  /* or 180% */
+  color: #333333;
+  line-height: 20px;
+  text-align: center;
+  height: 72px;
+  width: 160px;
+  padding-top: 40px;
+  padding-left: 21px;
+  padding-right: 21px;
+}
+.inputBackground .pop4 .ChatGPTArea {
+  position: absolute;
+  width: 283px;
+  height: 120px;
+  left: 50px;
+  top: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  outline: 1px;
+  text-align: center;
+  max-width: 225px;
+  max-height: 4.3em;
+  font-size: 20px;
+  font-family: 'PingFang HK';
+  line-height: 1.5;
+  text-overflow: ellipsis;
+  color: #333333;
+}
+.inputBackground .pop4 .ChatGPTArea .ChatGPTText {
+  position: absolute;
+  text-align: center;
+  max-width: 225px;
+  max-height: 4.3em;
+  font-size: 15px;
+  font-family: 'PingFang HK';
+  line-height: 1.5;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: #333333;
+  /* 15个字 x 15像素/字 = 225像素 */
+  /* 祝你一切顺利，幸福快乐！ */
+}
+.inputBackground .pop4 .useitBtn {
+  box-sizing: border-box;
+  text-align: center;
+  font-size: 16px;
+  line-height: 46px;
+  width: 271px;
+  height: 50px;
+  margin-top: 180px;
+  margin-left: 26px;
+  left: 0vw;
+  border-radius: 10px;
+  background: #0F3A60;
+  font-family: "Roboto";
+  font-style: normal;
+  line-height: 23px;
+  font-weight: 400;
+  /* Rectangle 15 */
+}
+.inputBackground .pop4 .useitBtn .useItWording {
+  /* 使用心愿 */
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 200;
+  font-size: 20px;
+  line-height: 19px;
+  /* identical to box height */
+  color: #FFFFFF;
+}
+.inputBackground .pop4 .anotherBtn {
+  line-height: 23px;
+  margin-top: 1.8vh;
+  text-align: center;
+}
+.inputBackground .pop4 .anotherBtn .anotherWording {
+  /* 换一个 */
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 19px;
+  /* identical to box height */
+  color: #0F3A60;
+}
+.inputBackground .leaf {
+  position: relative;
+  width: 45px;
+  height: 45px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.inputBackground .leaf img {
+  position: absolute;
+  text-align: center;
+  top: 6vh;
+  left: 50%;
+  transform: translate(260%, -50%);
+  max-width: 100%;
+  max-height: 100%;
+}
+.inputBackground .signing {
+  display: flex;
+  /* 使用flex布局 */
+  justify-content: center;
+  /* 水平居中 */
+  align-items: flex-end;
+  /* 垂直对齐底部 */
+  /* 距离底部6vh */
+}
+.inputBackground .signing .madeBy {
+  /*文字区域*/
+  position: absolute;
+  width: 100px;
+  bottom: 5.5vh;
+  font-family: 'Helvetica';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 10px;
+  line-height: 11px;
+  text-align: center;
+  padding-right: 83px;
+}
+.inputBackground .signing .logo {
+  /*logo区域*/
+  position: absolute;
+  background-repeat: no-repeat;
+  width: 80px;
+  height: 26px;
+  bottom: 6vh;
+  padding-left: 83px;
+}
+.inputBackground .close-button {
+  background-color: transparent;
+  position: absolute;
+  border: none;
+  font-size: 20px;
+  top: 1vh;
+  right: 1vh;
+}
