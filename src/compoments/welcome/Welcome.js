@@ -16,7 +16,8 @@ import { getQueryString } from "../../util/util";
 
 export default function Welcome(props) {
   const changeRoute = useContext(PageRouterContext);
-  const [name, setName] = useState("");
+  // const [name, setName] = useState("");
+  // const [pop, setPop] = useState(false);
   const navigateTo = (changeRoute, id) => {
     changeRoute({ id: id });
   };
@@ -24,16 +25,20 @@ export default function Welcome(props) {
   const checkPlay = async () => {
     navigateTo(changeRoute, config.pages.input);
   };
-
+ 
   useEffect(() => {
     if (props.username) {
-      setName(props.username);
+      // setName(props.username);
+      // setPop(false);
     } else {
       (async () => {
         let useinfo = await getUserinfo(getQueryString("code"));
-        if (useinfo) {
+        console.log('useinfo'+useinfo)
+        if (useinfo.nickname) {
           props.setUsername(useinfo.nickname);
-          setName(useinfo.nickname);
+        }else{
+          console.log('else')
+        
         }
       })();
     }
@@ -42,7 +47,7 @@ export default function Welcome(props) {
     <div className="welcomeBackground">
       <div className="welcomebgContent">
         <div className="wechatId">
-          @<span id="postWechatId">{name}</span>
+           <span id="postWechatId"></span>
         </div>
         <div className="niceMeet">很高兴遇见你</div>
         <div className="wishRs">心愿收据</div>
@@ -59,8 +64,9 @@ export default function Welcome(props) {
           <span className="gnbord">零.壹团队</span>
           <br />
           Annual Dinner 2023
-        </div>
+        </div>     
       </div>
+   
     </div>
   );
 }

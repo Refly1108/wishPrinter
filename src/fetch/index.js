@@ -24,12 +24,14 @@ export function fetchRequest(url, opts, jsonFormat) {
 
 export const postToServer = async (data) => {
   let url = config.url.save;
-  url += JSON.stringify(data);
+  //url += JSON.stringify(data);
   let opts = {
-    method: "GET",
+    method: "POST",
     headers: {
       "Content-Type": "application/json",
     },
+    body:JSON.stringify(data)
+
   };
   let result = await saveResultValidation(await fetchRequest(url, opts, true));
 
@@ -37,13 +39,7 @@ export const postToServer = async (data) => {
 };
 
 export const saveResultValidation = async (result) => {
-  console.log("saveResultValidation");
-  console.log(result);
-  if (result.status == 0) {
-    return true;
-  } else {
-    return false;
-  }
+  return result;
 };
 
 

@@ -5,6 +5,22 @@
   background-size: cover;
   background-repeat: no-repeat;
 }
+
+.inputBackground .inputNameTitle {
+  /* 请输入你的愿望 */
+  position: absolute;
+  padding-left: 13vw;
+  width: 200px;
+  height: 28px;
+  padding-top: 16vh;
+  font-family: 'PingFang SC';
+  font-style: normal;
+  font-weight: 300;
+  font-size: 20px;
+  line-height: 28px;
+  /* identical to box height */
+  color: #0F3A60;
+}
 .inputBackground .inputWishTitle {
   /* 请输入你的愿望 */
   position: absolute;
@@ -20,6 +36,8 @@
   /* identical to box height */
   color: #0F3A60;
 }
+
+
 .inputBackground textarea {
   box-sizing: border-box;
   position: absolute;

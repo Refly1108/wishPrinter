@@ -15,6 +15,7 @@
   height: 100vh;
   color: #1b0460;
 }
+
 .welcomeBackground .welcomebgContent .wechatId {
   font-size: 16pt;
   font-weight: bolder;
@@ -73,3 +74,4 @@
 .welcomeBackground .welcomebgContent .groupName .gnbord {
   font-weight: bolder;
 }
+

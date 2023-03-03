@@ -21,6 +21,7 @@ import { getRandomWish } from "../../util/util";
 export default function CustermoInput(props) {
   const [text, setText] = useState("");
   const [process, setProcess] = useState(false);
+  const [name, setName] = useState("壹.零er");
   const changeRoute = useContext(PageRouterContext);
   // jay for ui display
   const [displayMask, setDisplayMask] = useState(false);
@@ -43,7 +44,12 @@ export default function CustermoInput(props) {
     }
     console.log(newText);
   };
-
+  const inputName = (event) => {
+    
+    setName(event.target.value);
+    //setName(props.username);
+    props.setUsername(event.target.value);
+  };
   //ChatGPT
   const ChatGPTSelect = () => {
     let wish = getRandomWish();
@@ -136,9 +142,9 @@ export default function CustermoInput(props) {
     let type = getQueryString("type");
    
       result = await postToServer({
-        name: props.username,
-        text: text,
-        type: type? type:1
+        nickname: props.username?props.username:'壹.零er',
+        wish: text,
+        printerId: type? type:1
       });
     
 
@@ -156,9 +162,16 @@ export default function CustermoInput(props) {
   const home = () => {
     navigateTo(changeRoute, config.pages.welcome);
   };
-
+  useEffect(() => {
+    if (props.username) {
+      setName(props.username);
+      // setPop(false);
+    } 
+  }, []);
   return (
     <div className="inputBackground">
+      <div className="inputNameTitle">请输入你的名字:  {name}</div>
+      
       <div className="inputWishTitle">请输入你的愿望</div>
       <textarea type="text" value={text} onChange={inputWish}></textarea>
       <div className="wordinglimit">

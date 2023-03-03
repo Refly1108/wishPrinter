@@ -1,8 +1,13 @@
 const config = {
   url: {
-    save: "http://39.108.114.45:3001/saveprdata/",
-    getuserinfo: "http://39.108.114.45:3001/gettoken/",
+    save: "https://zhiliaodev.htcangelfund.com/service/setWish",
+    getuserinfo: "https://zhiliaodev.htcangelfund.com/service/getNickname?code=",
   },
+  // url: {
+  //   save: "http://39.108.114.45:80/service/setWish",
+  //   getuserinfo: "http://39.108.114.45:80/service/getNickname?code=",
+  // },
+
 
   wxurl: {
     userinfo: "/test/sns/userinfo?",
