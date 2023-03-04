@@ -26,23 +26,25 @@ export default function Welcome(props) {
     navigateTo(changeRoute, config.pages.input);
   };
  
-  // useEffect(() => {
-  //   if (props.username) {
-  //     // setName(props.username);
-  //     // setPop(false);
-  //   } else {
-  //     (async () => {
-  //       let useinfo = await getUserinfo(getQueryString("code"));
-  //       console.log('useinfo'+useinfo)
-  //       if (useinfo.nickname) {
-  //         props.setUsername(useinfo.nickname);
-  //       }else{
-  //         console.log('else')
+  useEffect(() => {
+    if (props.username) {
+      // setName(props.username);
+      // setPop(false);
+    } else {
+      (async () => {
+        if(getQueryString("code")){
+        let useinfo = await getUserinfo(getQueryString("code"));
+        console.log('useinfo'+useinfo)
+        if (useinfo.nickname) {
+          props.setUsername(useinfo.nickname);
+        }else{
+          console.log('else')
         
-  //       }
-  //     })();
-  //   }
-  // }, []);
+        }
+      }
+      })();
+    }
+  }, []);
   return (
     <div className="welcomeBackground">
       <div className="welcomebgContent">

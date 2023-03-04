@@ -163,12 +163,12 @@ export default function CustermoInput(props) {
   const home = () => {
     navigateTo(changeRoute, config.pages.welcome);
   };
-  // useEffect(() => {
-  //   // if (props.username) {
-  //   //   setName(props.username);
-  //   //   // setPop(false);
-  //   // } 
-  // }, []);
+  useEffect(() => {
+    if (props.username) {
+      setName(props.username);
+      // setPop(false);
+    } 
+  }, []);
   return (
     <div className="inputBackground">
       <div className="inputNameTitle">你想为谁许下愿望 </div>
