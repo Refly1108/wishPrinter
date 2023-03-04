@@ -45,7 +45,8 @@ export default function CustermoInput(props) {
     console.log(newText);
   };
   const inputName = (event) => {
-    
+    console.log(event);
+  
     setName(event.target.value);
     //setName(props.username);
     props.setUsername(event.target.value);
@@ -162,18 +163,20 @@ export default function CustermoInput(props) {
   const home = () => {
     navigateTo(changeRoute, config.pages.welcome);
   };
-  useEffect(() => {
-    if (props.username) {
-      setName(props.username);
-      // setPop(false);
-    } 
-  }, []);
+  // useEffect(() => {
+  //   // if (props.username) {
+  //   //   setName(props.username);
+  //   //   // setPop(false);
+  //   // } 
+  // }, []);
   return (
     <div className="inputBackground">
-      <div className="inputNameTitle">请输入你的名字:  {name}</div>
+      <div className="inputNameTitle">你想为谁许下愿望 </div>
+      <textarea className = "nametextarea" type="text" value={name} onChange={inputName}></textarea>
       
+      <textarea className = "wishtextarea" type="text" value={text} onChange={inputWish}></textarea>
       <div className="inputWishTitle">请输入你的愿望</div>
-      <textarea type="text" value={text} onChange={inputWish}></textarea>
+      {/* <textarea type="text" value={text} onChange={inputWish}></textarea> */}
       <div className="wordinglimit">
         {text.length}/{MAX_LENGTH}
       </div>
@@ -289,6 +292,7 @@ export default function CustermoInput(props) {
           <div class="anotherWording">换一个</div>
         </div>
       </div>
+     
     </div>
   );
 }
