@@ -12,7 +12,7 @@
   padding-left: 13vw;
   width: 200px;
   height: 28px;
-  padding-top: 16vh;
+  padding-top: 8vh;
   font-family: 'PingFang SC';
   font-style: normal;
   font-weight: 300;
@@ -24,10 +24,10 @@
 .inputBackground .nametextarea {
   box-sizing: border-box;
   position: absolute;
-  width: 50vw;
-  height: 5vh;
+  width: 60vw;
+  height: 6vh;
   resize: none;
-  margin-top: 20vh;
+  margin-top: 15vh;
   margin-left: 13vw;
   background: rgba(255, 255, 255, 0.74);
   border: 1px solid #fbd632;
@@ -48,7 +48,7 @@
   position: absolute;
   padding-left: 13vw;
   width: 200px;
-  height: 28px;
+  height: 3vh;
   /* padding-top: 26vh; */
   bottom: 70vh;
   font-family: 'PingFang SC';
@@ -204,7 +204,7 @@
   transform: translateY(-50%);
   -webkit-transform: translateY(-50%);
   width: 323px;
-  height: 300px;
+  height: 350px;
 }
 .inputBackground .pop1 .content {
   position: absolute;
@@ -241,6 +241,23 @@
   font-weight: 400;
   /* identical to box height */
   color: #FFFFFF;
+}
+.inputBackground .pop1 .i_know2 {
+  box-sizing: border-box;
+  text-align: center;
+  font-size: 16px;
+  width: 271px;
+  height: 50px;
+  margin-top: 1vh;
+  margin-left: 26px;
+  border-radius: 10px;
+  background: #FFFFFF;
+  font-family: "Roboto";
+  font-style: normal;
+  line-height: 19px;
+  font-weight: 400;
+  /* identical to box height */
+  color: #0F3A60;
 }
 .inputBackground .pop1 .later {
   line-height: 23px;
@@ -461,6 +478,70 @@
   /* identical to box height */
   color: #0F3A60;
 }
+
+.inputBackground .pop5 {
+  width: 80%;
+  overflow: hidden;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  margin: auto;
+  border-radius: 20px;
+  background-color: #fff;
+  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  width: 323px;
+  height: 300px;
+}
+.inputBackground .pop5 .content {
+  position: absolute;
+  width: 283px;
+  height: 72px;
+  left: 50px;
+  top: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  outline: 1px;
+  text-align: center;
+  max-width: 225px;
+  max-height: 4.3em;
+  font-size: 20px;
+  font-family: 'PingFang HK';
+  line-height: 36px;
+  text-overflow: ellipsis;
+  color: #333333;
+}
+
+.inputBackground .pop5 .useitBtn {
+  box-sizing: border-box;
+  text-align: center;
+  font-size: 16px;
+  line-height: 46px;
+  width: 271px;
+  height: 50px;
+  margin-top: 180px;
+  margin-left: 26px;
+  left: 0vw;
+  border-radius: 10px;
+  background: #0F3A60;
+  font-family: "Roboto";
+  font-style: normal;
+  line-height: 23px;
+  font-weight: 400;
+  /* Rectangle 15 */
+}
+.inputBackground .pop5 .useitBtn .useItWording {
+  /* 使用心愿 */
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 200;
+  font-size: 20px;
+  line-height: 19px;
+  /* identical to box height */
+  color: #FFFFFF;
+}
 .inputBackground .leaf {
   position: relative;
   width: 45px;
@@ -516,4 +597,21 @@
   font-size: 20px;
   top: 1vh;
   right: 1vh;
+}
+
+.inputBackground .InputPopWording{
+  box-sizing: border-box;
+  position: absolute;
+  width: 65vw;
+  height: 50px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  left: 18vw;
+  bottom: 60vh;
+  background: rgba(97, 88, 88, 0.5);
+  border: 1.5px solid #333333;
+  border-radius: 10px;
+  color: #FFFFFF;
 }

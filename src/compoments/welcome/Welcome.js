@@ -16,7 +16,7 @@ import { getQueryString } from "../../util/util";
 
 export default function Welcome(props) {
   const changeRoute = useContext(PageRouterContext);
-  // const [name, setName] = useState("");
+ //  const [name, setName] = useState("");
   // const [pop, setPop] = useState(false);
   const navigateTo = (changeRoute, id) => {
     changeRoute({ id: id });
@@ -40,6 +40,11 @@ export default function Welcome(props) {
         }else{
           console.log('else')
         
+        }
+      }else{
+        if(getQueryString("name")){
+          props.setUsername(getQueryString("name"));
+          //setName(getQueryString("name"));
         }
       }
       })();
