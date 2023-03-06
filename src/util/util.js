@@ -132,3 +132,10 @@ export const getparams = (url, key) => {
   console.log(param);
   return param;
 };
+export const isEmpty = (str) => {
+  if(str==undefined||str==null||str===""){
+    return true;
+  }
+  return false;
+};
+

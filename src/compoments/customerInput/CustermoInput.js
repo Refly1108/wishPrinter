@@ -17,7 +17,7 @@ import logo from "../../resource/logo1.0.png";
 import config from "../../config/config";
 import { postToServer } from "../../fetch/index";
 import { getQueryString } from "../../util/util";
-import { getRandomWish } from "../../util/util";
+import { getRandomWish ,isEmpty} from "../../util/util";
 import wishs from "../../config/wishs";
 export default function CustermoInput(props) {
   const [text, setText] = useState("");
@@ -83,7 +83,7 @@ export default function CustermoInput(props) {
   };
   const checkingInput = () => {
     let result = false;
-    if (name & text) {
+    if (isEmpty(name)||isEmpty(text)) {
       result = true;
     }
     return result;
@@ -91,6 +91,10 @@ export default function CustermoInput(props) {
 
   const printWish = () => {
     if (checkingInput()) {
+      console.log("can not be null")
+      inputCheckPop();
+    } else {
+     
       setDisplayMask(true);
       setDisplayPrintFirst(true);
       setDisplayPrintSecond(false);
@@ -98,9 +102,6 @@ export default function CustermoInput(props) {
       //打印逻辑
       setDisplayPrintForth(false);
       setDisplayPrintFailed(false);
-    } else {
-      console.log("can not be null")
-      inputCheckPop();
     }
   };
 
