@@ -45,7 +45,7 @@
   width: 112px;
   height: 22px;
   left: 2vw;
-  top: 1vh;
+  top: 8px;
   font-family: 'PingFang SC';
   font-style: normal;
   font-weight: 300;
@@ -239,7 +239,7 @@
   width: 271px;
   height: 50px;
   margin-top: 163px;
-  margin-left: 20px;
+  margin-left: 25px;
   border-radius: 10px;
   background: #0F3A60;
   font-family: "Roboto";
@@ -257,15 +257,17 @@
   width: 271px;
   height: 50px;
   margin-top: 1.5vh;
-  margin-left: 20px;
-  border-radius: 10px;
+  margin-left: 25px;
   background: #FFFFFF;
   font-family: "Roboto";
   font-style: normal;
   line-height: 19px;
   font-weight: 400;
+  /* border:1px; */
   /* identical to box height */
   color: #0F3A60;
+  border: 1.5px solid #333333;
+  border-radius: 10px;
 }
 .inputBackground .pop1 .later {
   line-height: 23px;
