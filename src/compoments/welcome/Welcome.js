@@ -34,11 +34,11 @@ export default function Welcome(props) {
       (async () => {
         if(getQueryString("code")){
         let useinfo = await getUserinfo(getQueryString("code"));
-        console.log('useinfo'+useinfo)
+      //  console.log('useinfo'+useinfo)
         if (useinfo.nickname) {
           props.setUsername(useinfo.nickname);
         }else{
-          console.log('else')
+        //  console.log('else')
         
         }
       }else{
@@ -53,12 +53,12 @@ export default function Welcome(props) {
   return (
     <div className="welcomeBackground">
       <div className="welcomebgContent">
-        <div className="wechatId">
+        {/* <div className="wechatId">
            <span id="postWechatId"></span>
-        </div>
-        <div className="niceMeet">很高兴遇见你</div>
+        </div> */}
+        {/* <div className="niceMeet">很高兴遇见你</div>
         <div className="wishRs">心愿收据</div>
-        <div className="Regarding2023">2023年万事顺遂，心想事成</div>
+        <div className="Regarding2023">2023年万事顺遂，心想事成</div> */}
         <Button
           variant="contained"
           color="green"
@@ -67,11 +67,11 @@ export default function Welcome(props) {
         >
           <span className="iWish">我要许愿</span>
         </Button>
-        <div className="groupName">
+        {/* <div className="groupName">
           <span className="gnbord">零.壹团队</span>
           <br />
           Annual Dinner 2023
-        </div>     
+        </div>      */}
       </div>
    
     </div>

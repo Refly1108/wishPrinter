@@ -5,7 +5,6 @@
   background-size: cover;
   background-repeat: no-repeat;
 }
-
 .inputBackground .inputNameTitle {
   /* 请输入你的愿望 */
   position: absolute;
@@ -24,13 +23,13 @@
 .inputBackground .nametextarea {
   box-sizing: border-box;
   position: absolute;
-  width: 60vw;
-  height: 6vh;
+  width: 74vw;
+  height: 47px;
   resize: none;
-  margin-top: 15vh;
+  margin-top: 21vh;
   margin-left: 13vw;
-  background: rgba(255, 255, 255, 0.74);
-  border: 1px solid #fbd632;
+  background: rgba(255, 255, 255, 0.4);
+  border: 1px solid rgba(15, 58, 96, 0.31);
   border-radius: 10px;
   font-family: "PingFang HK";
   font-style: normal;
@@ -41,8 +40,32 @@
   overflow: hidden;
   color: #444444;
 }
-
-
+.inputBackground .nametextarea::placeholder {
+  position: absolute;
+  width: 112px;
+  height: 22px;
+  left: 2vw;
+  top: 1vh;
+  font-family: 'PingFang SC';
+  font-style: normal;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 22px;
+  color: rgba(15, 58, 96, 0.6);
+}
+.inputBackground .wishtextarea::placeholder {
+  position: absolute;
+  width: 112px;
+  height: 2px;
+  left: 2vw;
+  top: 1vh;
+  font-family: 'PingFang SC';
+  font-style: normal;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 22px;
+  color: rgba(15, 58, 96, 0.6);
+}
 .inputBackground .inputWishTitle {
   /* 请输入你的愿望 */
   position: absolute;
@@ -59,32 +82,16 @@
   /* identical to box height */
   color: #0F3A60;
 }
-.inputBackground .inputWishTitle2 {
-  /* 请输入你的愿望 */
-  position: absolute;
-  padding-left: 13vw;
-  width: 200px;
-  height: 28px;
-  padding-top: 26vh;
-  font-family: 'PingFang SC';
-  font-style: normal;
-  font-weight: 300;
-  font-size: 20px;
-  line-height: 28px;
-  /* identical to box height */
-  color: #0F3A60;
-}
-
-.inputBackground .wishtextarea {
+.inputBackground textarea.wishtextarea {
   box-sizing: border-box;
   position: absolute;
   width: 74vw;
-  height: 30vh;
+  height: 28vh;
   resize: none;
   margin-top: 31vh;
   margin-left: 13vw;
-  background: rgba(255, 255, 255, 0.74);
-  border: 1px solid #fbd632;
+  background: rgba(255, 255, 255, 0.4);
+  border: 1px solid rgba(15, 58, 96, 0.31);
   border-radius: 10px;
   font-family: "PingFang HK";
   font-style: normal;
@@ -100,7 +107,7 @@
   position: absolute;
   height: 19px;
   right: 15vw;
-  bottom: 40vh;
+  bottom: 42vh;
   font-family: 'Roboto';
   font-style: normal;
   font-weight: 400;
@@ -118,8 +125,8 @@
   text-decoration: none;
   position: absolute;
   height: 20px;
-  margin-left: 13vw;
-  bottom: 34vh;
+  padding-left: 13vw;
+  bottom: 36vh;
   font-family: 'PingFang HK';
   font-style: normal;
   font-weight: 400;
@@ -163,7 +170,7 @@
   font-family: 'PingFang HK';
   font-style: normal;
   font-weight: 400;
-  font-size: 18px;
+  font-size: 16px;
   line-height: 25px;
   text-align: center;
   color: #0F3A60;
@@ -178,7 +185,7 @@
   font-family: "PingFang HK";
   font-style: normal;
   font-weight: 400;
-  font-size: 18px;
+  font-size: 16px;
   line-height: 25px;
   text-align: center;
   color: #333333;
@@ -208,31 +215,31 @@
 }
 .inputBackground .pop1 .content {
   position: absolute;
-  width: 283px;
+  width: 285px;
   height: 72px;
-  left: 50px;
-  top: 60px;
+  left: 35px;
+  top: 55px;
   display: flex;
   justify-content: center;
   align-items: center;
   outline: 1px;
-  text-align: center;
-  max-width: 225px;
+  max-width: 255px;
   max-height: 4.3em;
   font-size: 20px;
   font-family: 'PingFang HK';
   line-height: 36px;
   text-overflow: ellipsis;
+  text-align: center;
   color: #333333;
 }
-.inputBackground .pop1 .i_know {
-  box-sizing: border-box;
+.inputBackground .pop1 .printOne {
+  box-sizing: content-box;
   text-align: center;
   font-size: 16px;
   width: 271px;
   height: 50px;
-  margin-top: 170px;
-  margin-left: 26px;
+  margin-top: 163px;
+  margin-left: 20px;
   border-radius: 10px;
   background: #0F3A60;
   font-family: "Roboto";
@@ -242,14 +249,15 @@
   /* identical to box height */
   color: #FFFFFF;
 }
-.inputBackground .pop1 .i_know2 {
-  box-sizing: border-box;
+.inputBackground .pop1 .printTwo {
+  /* box-sizing: border-box; */
+  box-sizing: content-box;
   text-align: center;
   font-size: 16px;
   width: 271px;
   height: 50px;
-  margin-top: 1vh;
-  margin-left: 26px;
+  margin-top: 1.5vh;
+  margin-left: 20px;
   border-radius: 10px;
   background: #FFFFFF;
   font-family: "Roboto";
@@ -457,8 +465,8 @@
   /* 使用心愿 */
   font-family: 'Roboto';
   font-style: normal;
-  font-weight: 200;
-  font-size: 20px;
+  font-weight: 400;
+  font-size: 16px;
   line-height: 19px;
   /* identical to box height */
   color: #FFFFFF;
@@ -472,13 +480,12 @@
   /* 换一个 */
   font-family: 'Roboto';
   font-style: normal;
-  font-weight: 600;
+  font-weight: 400;
   font-size: 18px;
   line-height: 19px;
   /* identical to box height */
   color: #0F3A60;
 }
-
 .inputBackground .pop5 {
   width: 80%;
   overflow: hidden;
@@ -513,7 +520,6 @@
   text-overflow: ellipsis;
   color: #333333;
 }
-
 .inputBackground .pop5 .useitBtn {
   box-sizing: border-box;
   text-align: center;
@@ -598,20 +604,33 @@
   top: 1vh;
   right: 1vh;
 }
-
-.inputBackground .InputPopWording{
+.inputBackground .InputPopWording {
   box-sizing: border-box;
   position: absolute;
-  width: 65vw;
+  width: 78vw;
   height: 50px;
   text-align: center;
   display: flex;
   justify-content: center;
   align-items: center;
-  left: 18vw;
-  bottom: 60vh;
-  background: rgba(97, 88, 88, 0.5);
-  border: 1.5px solid #333333;
-  border-radius: 10px;
+  left: 11vw;
+  bottom: 55vh;
+  background: rgba(0, 0, 0, 0.5);
+  border: 0px solid #333333;
+  border-radius: 8px;
+  color: #FFFFFF;
+}
+.inputBackground .InputPopWording .InputPopReminderWording {
+  /* 请输入你的名字和心愿哦 */
+  position: absolute;
+  width: 220px;
+  height: 36px;
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 36px;
+  /* identical to box height, or 180% */
+  text-align: center;
   color: #FFFFFF;
 }

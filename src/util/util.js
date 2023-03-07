@@ -5,7 +5,7 @@ export const getQueryString = (name) => {
   var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)", "i");
 
   var r = window.location.search.substr(1).match(reg);
-  console.log(r);
+  //console.log(r);
   if (r != null) {
     return unescape(r[2]);
   }
@@ -40,8 +40,8 @@ export const getWishArray = (str) => {
 
   if (checkChinese(str)) {
     array = str.split("，");
-    console.log("getWishArray");
-    console.log(array.length);
+   // console.log("getWishArray");
+  //  console.log(array.length);
     if (array.length < 2) {
       array = splitBylength(str);
     }
@@ -61,9 +61,9 @@ export const splitBylength = (str) => {
   let cut = 10;
   let string = str;
   let temp = "";
-  console.log("splitBylength in");
-  console.log(string.length);
-  console.log(string);
+ // console.log("splitBylength in");
+ // console.log(string.length);
+ // console.log(string);
   if (string.length <= cut) {
     array.push(string);
   } else {
@@ -79,8 +79,8 @@ export const splitBylength = (str) => {
       }
     }
   }
-  console.log(array[0]);
-  console.log("splitBylength out");
+ // console.log(array[0]);
+ // console.log("splitBylength out");
   return array;
 };
 
@@ -88,7 +88,7 @@ export const splitByblack = (str) => {
   let array = [];
   let array2 = [];
   array = str.split(" ");
-  console.log(array);
+  //console.log(array);
   for (let index = 0; index < array.length; index = index + 6) {
     let temp = "";
     for (
@@ -123,13 +123,13 @@ export const checkChinese = (val) => {
 export const getparams = (url, key) => {
   let str = url;
   let param = "";
-  console.log(url);
-  console.log(key);
+ // console.log(url);
+ // console.log(key);
   param = str.substring(str.indexOf(key) + key.length + 1);
   if (param.indexOf("&") > -1) {
     param = param.substring(0, param.indexOf("&"));
   }
-  console.log(param);
+ // console.log(param);
   return param;
 };
 export const isEmpty = (str) => {

@@ -11,6 +11,6 @@ export const getUserinfo = async (code) => {
   };
   
   let useinfo = await fetchRequest(url, opts, true);
-  console.log(useinfo);
+ // console.log(useinfo);
   return useinfo;
 };

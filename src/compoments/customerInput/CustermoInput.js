@@ -1,4 +1,4 @@
-import React, { useContext, useState, useEffect } from "react";
+import React, { useContext, useState, useEffect, useRef  } from "react";
 import { PageRouterContext } from "../../App";
 import ChatGPT from "../ChatGPT";
 import {
@@ -37,9 +37,27 @@ export default function CustermoInput(props) {
   const [ChatGPTdata, setChatGPTData] = useState();
   const selectedData = "祝福你的人生充满爱、和平和幸福！";
 
+  //提醒弹框出现后，点击页面任何位置，弹框消失
+  const inputPopRef = useRef(null); // 创建一个 ref
+  useEffect(() => {
+    function handleClickOutside(event) {
+      if (inputPopRef.current && !inputPopRef.current.contains(event.target)) {
+        closeInputPop();
+      }
+    }
+
+    // 给 document 添加点击事件监听器
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => {
+      // 在组件卸载时移除点击事件监听器
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
+  });
+
   //字数统计
   // const [inputWishValue, setInputWishValue] = useState('');
   const MAX_LENGTH = 70;
+  const MAX_NAME_LENGTH = 24;
   const inputWish = (event) => {
     let newText = event.target.value;
     if (newText.length <= MAX_LENGTH) {
@@ -47,10 +65,22 @@ export default function CustermoInput(props) {
     }
     console.log(newText);
   };
+  function countLength(text) {
+    // 计算字符长度，其中一个中文字符算两个字符
+    return text.replace(/[^\x00-\xff]/g, 'aa').length;
+  }
   const inputName = (event) => {
-    console.log(event);
+    //console.log(event);
+    let newName = event.target.value;
+    let length = countLength(newName);
+    // if (newName.length <= MAX_NAME_LENGTH) {
+    //   setName(newName);
+    // }
+    if (length <= MAX_NAME_LENGTH) {
+      setName(newName);
+    }
   
-    setName(event.target.value);
+    //setName(event.target.value);
     //setName(props.username);
     props.setUsername(event.target.value);
   };
@@ -181,7 +211,6 @@ export default function CustermoInput(props) {
 
   const inputCheckPop = () => {
     setDisplayInputPop(true)
-    //打印逻辑
   };
 
   const closeInputPop = ()=>{
@@ -191,7 +220,7 @@ export default function CustermoInput(props) {
   const submit = async (copy) => {
     setProcess(true);
     let result;
-    let type = getQueryString("type");
+    let type = getQueryString("printerId");
    
       result = await postToServer({
         nickname: props.username?props.username:'壹.零er',
@@ -199,10 +228,10 @@ export default function CustermoInput(props) {
         printerId: type? type:1,
         copy:copy
       });
-    
+    console.log(result);
 
     // let result = await printerReceipt(text);
-    if (result) {
+    if (result.result) {
       finishPrintingWish();
     } else {
       failedPrinting();
@@ -222,6 +251,12 @@ export default function CustermoInput(props) {
       // setPop(false);
     } 
   }, []);
+
+  useEffect(() => {
+    setTimeout(() => {
+      setDisplayInputPop(false);
+    }, 2000)
+}, [displayInputPop])
   return (
     <div className="inputBackground">
       <div className="inputNameTitle"> </div>
@@ -233,7 +268,7 @@ export default function CustermoInput(props) {
       <div className="wordinglimit">
         {text.length}/{MAX_LENGTH}
       </div>
-      <div className="flower"></div>
+      {/* <div className="flower"></div> */}
       {/* ChatGPT */}
       <ChatGPT
         className="ChatGPTbtn"
@@ -252,7 +287,7 @@ export default function CustermoInput(props) {
       <div className="back" onClick={home}>
         返回
       </div>
-      <div className="signing">
+      {/* <div className="signing">
         <div className="madeBy">
           <p>Made with love by</p>
         </div>
@@ -260,7 +295,7 @@ export default function CustermoInput(props) {
           <img src={logo} alt="logo" />
         </div>
         <div className="logo"></div>
-      </div>
+      </div> */}
       {/* masking */}
       <div
         class="mask"
@@ -285,7 +320,7 @@ export default function CustermoInput(props) {
         <Button
           variant="contained"
           color="green"
-          class="i_know"
+          class="printOne"
           onClick={printingWish}
         >
           <div>先打印一份</div>
@@ -293,7 +328,7 @@ export default function CustermoInput(props) {
         <Button
           variant="contained"
           color="green"
-          class="i_know2"
+          class="printTwo"
           onClick={printingWish2}
         >
           <div> 打印双份</div>
@@ -378,10 +413,15 @@ export default function CustermoInput(props) {
         </Button>
       </div>
       <div 
-        style={{ display: displayInputPop ? "block" : "none" }}
+        style={{ display: displayInputPop ? "block" : "none" }} ref={inputPopRef}
       >
        
-        <span className="InputPopWording" onClick={closeInputPop}>请输入你的名字和心愿哦</span>
+        <span className="InputPopWording" onClick={closeInputPop}>
+          <div className="InputPopReminderWording">
+          请输入你的名字和心愿哦
+          </div>
+      
+        </span>
      
       </div>
      
