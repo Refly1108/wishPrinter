@@ -26,7 +26,7 @@
   position: absolute;
   width: 132px;
   height: 31px;
-  font-family: 'PingFang SC';
+  font-family: 'PingFang HK';
   font-style: normal;
   font-weight: 300;
   font-size: 22px;
@@ -40,7 +40,7 @@
   font-weight: bolder;
   padding-left: 8vw;
   padding-top: 12vh;
-  font-family: 'FZFengYaSongS-GB';
+  font-family: 'PingFang HK';
   font-style: normal;
   line-height: 56px;
   color: #0F3A60;
@@ -49,7 +49,7 @@
 }
 .welcomeBackground .welcomebgContent .Regarding2023 {
   padding-left: 8vw;
-  font-family: 'PingFang SC';
+  font-family: 'PingFang HK';
   font-style: normal;
   font-weight: 300;
   font-size: 22px;
@@ -75,7 +75,7 @@
   position: center;
   width: 100px;
   height: 25px;
-  font-family: 'PingFang SC';
+  font-family: 'PingFang HK';
   font-style: normal;
   font-weight: 400px;
   font-size: 18px;
