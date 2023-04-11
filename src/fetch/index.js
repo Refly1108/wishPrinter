@@ -1,4 +1,5 @@
 import config from "../config/config";
+import { getLocation,getLocationAdds ,configWeixin} from "./weixin";
 
 export function fetchRequest(url, opts, jsonFormat) {
   return new Promise((resolve, reject) => {
@@ -34,7 +35,8 @@ export const postToServer = async (data) => {
 
   };
   let result = await saveResultValidation(await fetchRequest(url, opts, true));
-
+ 
+  
   return result;
 };
 

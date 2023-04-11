@@ -25,7 +25,7 @@
   box-sizing: border-box;
   position: absolute;
   width: 74vw;
-  height: 47px;
+  height: 38px;
   resize: none;
   margin-top: 21vh;
   margin-left: 13vw;
@@ -38,7 +38,7 @@
   font-family: "PingFang HK";
   font-style: normal;
   font-weight: 400;
-  font-size: 20px;
+  font-size: 18px;
   line-height: 28px;
   scrollbar-width: none;
   overflow: hidden;
@@ -51,7 +51,8 @@
 width: 112px;
 height: 22px;
 left: 2vw;
-top: 1vh;
+// top: 8px;
+
 
 font-family: 'PingFang SC';
 font-style: normal;
@@ -60,6 +61,9 @@ font-size: 16px;
 line-height: 22px;
 
 color: rgba(15, 58, 96, 0.6);
+//text-align: center;
+vertical-align: middle;
+line-height: inherit;
 
 }
 
@@ -94,7 +98,7 @@ color: rgba(15, 58, 96, 0.6);
   font-family: 'PingFang SC';
   font-style: normal;
   font-weight: 300;
-  font-size: 20px;
+  font-size: 18px;
   line-height: 28px;
   /* identical to box height */
   color: #0F3A60;
@@ -161,7 +165,7 @@ textarea.wishtextarea {
   position: absolute;
   height: 20px;
   padding-left: 13vw;
-  bottom: 34vh;
+  bottom: 36vh;
   font-family: 'PingFang HK';
   font-style: normal;
   font-weight: 400;
@@ -195,7 +199,8 @@ textarea.wishtextarea {
   left: 13vw;
   bottom: 23vh;
   background: rgba(255, 255, 255, 0.5);
-  border: 1.5px solid #333333;
+  //border: 1.5px solid #333333;
+  border: 1.5px solid #0F3A60;
   border-radius: 10px;
 
  .btnPrintWording {
@@ -276,7 +281,7 @@ textarea.wishtextarea {
   width: 271px;
   height: 50px;
   margin-top: 163px;
-  margin-left: 26px;
+  margin-left: 25px;
   border-radius: 10px;
   background: #0F3A60;
   font-family: "Roboto";
@@ -293,8 +298,8 @@ textarea.wishtextarea {
   width: 271px;
   height: 50px;
   margin-top: 1.5vh;
-  margin-left: 26px;
-  border-radius: 10px;
+  margin-left: 25px;
+
   background: #FFFFFF;
   font-family: "Roboto";
   font-style: normal;
@@ -302,6 +307,9 @@ textarea.wishtextarea {
   font-weight: 400;
   /* identical to box height */
   color: #0F3A60;
+  //border: 1.5px solid #333333;
+  border: 1.5px solid #0F3A60;
+    border-radius: 10px;
 }
 .later {
   line-height: 23px;
@@ -528,7 +536,7 @@ textarea.wishtextarea {
   font-family: 'Roboto';
   font-style: normal;
   font-weight: 400;
-  font-size: 18px;
+  font-size: 16px;
   line-height: 19px;
   /* identical to box height */
   color: #0F3A60;
@@ -659,9 +667,16 @@ textarea.wishtextarea {
   background-color: transparent;
   position: absolute;
   border: none;
-  font-size: 20px;
+  font-size: 10px;
   top: 1vh;
   right: 1vh;
+  width: 2.5rem; /* 设置关闭按钮的宽度 */
+  height: 2.5rem; /* 设置关闭按钮的高度 */
+}
+
+.close-button img {
+  max-width: 100%; /* 将图片最大宽度设置为 100% */
+  height: auto; /* 根据宽度自动缩放高度 */
 }
 
  .InputPopWording{
@@ -676,7 +691,7 @@ textarea.wishtextarea {
   left: 11vw;
   bottom: 55vh;
   background: rgba(0, 0, 0, 0.5);
-  border: 1.5px solid #333333;
+  //border: 1.5px solid #333333;
   border-radius: 8px;
   color: #FFFFFF;
 

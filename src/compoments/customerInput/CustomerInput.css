@@ -45,13 +45,14 @@
   width: 112px;
   height: 22px;
   left: 2vw;
-  top: 8px;
   font-family: 'PingFang SC';
   font-style: normal;
   font-weight: 300;
   font-size: 16px;
   line-height: 22px;
   color: rgba(15, 58, 96, 0.6);
+  vertical-align: middle;
+  line-height: inherit;
 }
 .inputBackground .wishtextarea::placeholder {
   position: absolute;
@@ -160,7 +161,7 @@
   left: 13vw;
   bottom: 23vh;
   background: rgba(255, 255, 255, 0.5);
-  border: 1.5px solid #333333;
+  border: 1.5px solid #0F3A60;
   border-radius: 10px;
 }
 .inputBackground .printWish .btnPrintWording {
@@ -250,7 +251,6 @@
   color: #FFFFFF;
 }
 .inputBackground .pop1 .printTwo {
-  /* box-sizing: border-box; */
   box-sizing: border-box;
   text-align: center;
   font-size: 16px;
@@ -263,10 +263,9 @@
   font-style: normal;
   line-height: 19px;
   font-weight: 400;
-  /* border:1px; */
   /* identical to box height */
   color: #0F3A60;
-  border: 1.5px solid #333333;
+  border: 1.5px solid #0F3A60;
   border-radius: 10px;
 }
 .inputBackground .pop1 .later {
@@ -483,7 +482,7 @@
   font-family: 'Roboto';
   font-style: normal;
   font-weight: 400;
-  font-size: 18px;
+  font-size: 16px;
   line-height: 19px;
   /* identical to box height */
   color: #0F3A60;
@@ -602,9 +601,19 @@
   background-color: transparent;
   position: absolute;
   border: none;
-  font-size: 20px;
+  font-size: 10px;
   top: 1vh;
   right: 1vh;
+  width: 2.5rem;
+  /* 设置关闭按钮的宽度 */
+  height: 2.5rem;
+  /* 设置关闭按钮的高度 */
+}
+.inputBackground .close-button img {
+  max-width: 100%;
+  /* 将图片最大宽度设置为 100% */
+  height: auto;
+  /* 根据宽度自动缩放高度 */
 }
 .inputBackground .InputPopWording {
   box-sizing: border-box;
@@ -618,7 +627,6 @@
   left: 11vw;
   bottom: 55vh;
   background: rgba(0, 0, 0, 0.5);
-  border: 0px solid #333333;
   border-radius: 8px;
   color: #FFFFFF;
 }

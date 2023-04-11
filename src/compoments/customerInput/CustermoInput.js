@@ -16,6 +16,7 @@ import leaf from "../../resource/leaf.PNG";
 import logo from "../../resource/logo1.0.png";
 import config from "../../config/config";
 import { postToServer } from "../../fetch/index";
+import {saveAddress} from '../../fetch/weixin'
 import { getQueryString } from "../../util/util";
 import { getRandomWish ,isEmpty} from "../../util/util";
 import wishs from "../../config/wishs";
@@ -226,10 +227,10 @@ export default function CustermoInput(props) {
         nickname: props.username?props.username:'壹.零er',
         wish: text,
         printerId: type? type:1,
-        copy:copy
+        copy:copy,
       });
     console.log(result);
-
+   // await saveAddress(props.username?props.username:'壹.零er',props.useradd?props.useradd:"null");
     // let result = await printerReceipt(text);
     if (result.result) {
       finishPrintingWish();
@@ -279,6 +280,7 @@ export default function CustermoInput(props) {
         variant="contained"
         color="green"
         className="printWish"
+        tabIndex="2"
         onClick={printWish}
       >
         <span className="btnPrintWording">打印愿望</span>
@@ -395,7 +397,7 @@ export default function CustermoInput(props) {
       >
         {/* <div class="title"></div> */}
         <div class="content">
-          目前答应人数较多，
+          目前打印人数较多，
           <br />
           请稍后再试
         </div>
