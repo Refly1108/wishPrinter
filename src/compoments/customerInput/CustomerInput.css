@@ -634,7 +634,7 @@
 .inputBackground .InputPopWording .InputPopReminderWording {
   /* 请输入你的名字和心愿哦 */
   position: absolute;
-  width: 220px;
+  width: 300px;
   height: 36px;
   font-family: 'Roboto';
   font-style: normal;
