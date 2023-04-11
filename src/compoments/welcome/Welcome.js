@@ -63,9 +63,10 @@ export default function Welcome(props) {
           variant="contained"
           color="green"
           className="wishButton"
+          sx={{ml:6, textTransform: 'lowercase'}}
           onClick={checkPlay}
         >
-          <span className="iWish">我要许愿</span>
+          <span className="iWish">Go</span>
         </Button>
         {/* <div className="groupName">
           <span className="gnbord">零.壹团队</span>

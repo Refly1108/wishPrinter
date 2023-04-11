@@ -42,7 +42,7 @@
 }
 .inputBackground .nametextarea::placeholder {
   position: absolute;
-  width: 112px;
+  width: 200px;
   height: 22px;
   left: 2vw;
   top: 8px;
@@ -55,7 +55,7 @@
 }
 .inputBackground .wishtextarea::placeholder {
   position: absolute;
-  width: 112px;
+  width: 200px;
   height: 2px;
   left: 2vw;
   top: 1vh;
@@ -162,6 +162,7 @@
   background: rgba(255, 255, 255, 0.5);
   border: 1.5px solid #333333;
   border-radius: 10px;
+  text-transform: none;
 }
 .inputBackground .printWish .btnPrintWording {
   /* 打印愿望 */
@@ -625,7 +626,7 @@
 .inputBackground .InputPopWording .InputPopReminderWording {
   /* 请输入你的名字和心愿哦 */
   position: absolute;
-  width: 220px;
+  width: 300px;
   height: 36px;
   font-family: 'Roboto';
   font-style: normal;
