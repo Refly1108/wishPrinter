@@ -1,7 +1,10 @@
 const config = {
   url: {
-    save: "https://zhiliaodev.htcangelfund.com/service/setWish",
-    getuserinfo: "https://zhiliaodev.htcangelfund.com/service/getNickname?code=",
+    save: "http://175.178.13.221/service/setWish",
+    getuserinfo: "http://175.178.13.221/service/getNickname?code=",
+    getAddress:"http://175.178.13.221/spring/hello/getAddress?",
+    getSignature: "http://175.178.13.221/spring/hello/getSignature",
+    saveAddress: "http://175.178.13.221/spring/hello/saveAddress?",
   },
   // url: {
   //   save: "http://39.108.114.45:80/service/setWish",

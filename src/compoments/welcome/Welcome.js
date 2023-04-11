@@ -11,34 +11,43 @@ import {
 } from "@material-ui/core";
 import config from "../../config/config";
 import { getUserinfo } from "../../fetch/wxInfo";
+import { getLocation,getLocationAdds ,configWeixin} from "../../fetch/weixin";
 import { PageRouterContext } from "../../App";
 import { getQueryString } from "../../util/util";
 
 export default function Welcome(props) {
   const changeRoute = useContext(PageRouterContext);
- //  const [name, setName] = useState("");
+  const [name, setName] = useState("");
   // const [pop, setPop] = useState(false);
   const navigateTo = (changeRoute, id) => {
     changeRoute({ id: id });
   };
 
   const checkPlay = async () => {
+   
     navigateTo(changeRoute, config.pages.input);
   };
  
   useEffect(() => {
     if (props.username) {
-      // setName(props.username);
+       //setName(props.username);
       // setPop(false);
     } else {
       (async () => {
+        //TEST
+      //  console.log();
+      // await configWeixin();
+     
+        //TEST
         if(getQueryString("code")){
         let useinfo = await getUserinfo(getQueryString("code"));
       //  console.log('useinfo'+useinfo)
         if (useinfo.nickname) {
           props.setUsername(useinfo.nickname);
+          // let add = await getLocationAdds(useinfo.nickname);
+          // props.setUseradd(add);
         }else{
-        //  console.log('else')
+         // console.log('else')
         
         }
       }else{
@@ -63,7 +72,7 @@ export default function Welcome(props) {
           variant="contained"
           color="green"
           className="wishButton"
-          sx={{ml:6, textTransform: 'lowercase'}}
+          tabIndex="1"
           onClick={checkPlay}
         >
           <span className="iWish">Go</span>
