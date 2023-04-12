@@ -5,6 +5,7 @@
   background-size: cover;
   background-repeat: no-repeat;
 }
+
 .inputBackground .inputNameTitle {
   /* 请输入你的愿望 */
   position: absolute;
@@ -102,6 +103,12 @@
   scrollbar-width: none;
   overflow: hidden;
   color: #444444;
+}
+
+@supports (-webkit-touch-callout: none) {
+  .inputBackground textarea.wishtextarea {
+    height: 16vh;
+  }
 }
 .inputBackground .wordinglimit {
   /* 9/64 */

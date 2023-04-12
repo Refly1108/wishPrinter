@@ -24,7 +24,6 @@ export default function Welcome(props) {
   };
 
   const checkPlay = async () => {
-   
     navigateTo(changeRoute, config.pages.input);
   };
  
