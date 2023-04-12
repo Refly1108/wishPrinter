@@ -267,19 +267,23 @@ export default function CustermoInput(props) {
         value={name}
         onChange={inputName}
       ></textarea>
-
-      <textarea
-        className="wishtextarea"
-        type="text"
-        placeholder="What do you think?"
-        value={text}
-        onChange={inputWish}
-      ></textarea>
-      {/* <div className="inputWishTitle">请输入你的愿望</div> */}
-      {/* <textarea type="text" value={text} onChange={inputWish}></textarea> */}
-      <div className="wordinglimit">
-        {text.length}/{MAX_LENGTH}
+      <div className="wishcontainer">
+        <div class="textarea-wrapper">
+          <textarea
+            className="wishtextarea"
+            type="text"
+            placeholder="What do you think?"
+            value={text}
+            onChange={inputWish}
+          ></textarea>
+          {/* <div className="inputWishTitle">请输入你的愿望</div> */}
+          {/* <textarea type="text" value={text} onChange={inputWish}></textarea> */}
+          <div className="wordinglimit">
+            {text.length}/{MAX_LENGTH}
+          </div>
+        </div>
       </div>
+
       {/* <div className="flower"></div> */}
       {/* ChatGPT */}
       <ChatGPT

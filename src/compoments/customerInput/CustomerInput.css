@@ -4,6 +4,7 @@
   height: 100vh;
   background-size: cover;
   background-repeat: no-repeat;
+  position: fixed;
 }
 
 .inputBackground .inputNameTitle {
@@ -84,15 +85,38 @@
   /* identical to box height */
   color: #0F3A60;
 }
-.inputBackground textarea.wishtextarea {
-  box-sizing: border-box;
-  position: absolute;
+
+.inputBackground .wishcontainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 74vw;
   height: 28vh;
-  resize: none;
+  margin: 0 auto;
   margin-top: 31vh;
-  margin-left: 13vw;
-  background: rgba(255, 255, 255, 0.4);
+  box-sizing: border-box;
+
+
+}
+
+.inputBackground .wishcontainer .textarea-wrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+
+.inputBackground .wishcontainer .textarea-wrapper  .wishtextarea {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  resize: none;
+  padding: 10px;
+  box-sizing: border-box;
+  border: none;
+  outline: none;
+  font-size: 16px;
+    background: rgba(255, 255, 255, 0.4);
   border: 1px solid rgba(15, 58, 96, 0.31);
   border-radius: 10px;
   font-family: "PingFang HK";
@@ -105,17 +129,10 @@
   color: #444444;
 }
 
-@supports (-webkit-touch-callout: none) {
-  .inputBackground textarea.wishtextarea {
-    height: 16vh;
-  }
-}
-.inputBackground .wordinglimit {
-  /* 9/64 */
+.inputBackground .wishcontainer .textarea-wrapper  .wordinglimit {
   position: absolute;
-  height: 19px;
-  right: 15vw;
-  bottom: 42vh;
+  bottom: 5px;
+  right: 5px;
   font-family: 'PingFang HK';
   font-style: normal;
   font-weight: 400;
@@ -124,6 +141,8 @@
   /* identical to box height */
   color: #0F3A60;
 }
+
+
 .inputBackground .ChatGPTbtn {
   /* 没有头绪？问问ChatGPT吧 */
   background: none;
