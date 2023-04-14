@@ -33,7 +33,9 @@ export default function CustermoInput(props) {
   //Refly faild pop
   const [displayPrintFailed, setDisplayPrintFailed] = useState(false);
   const [displayInputPop, setDisplayInputPop] = useState(false);
+  const [popWording, setPopWording] = useState('please input your name and thoughts');
   //Add for chatGPT
+  
   const [displayPrintForth, setDisplayPrintForth] = useState(false);
   const [ChatGPTdata, setChatGPTData] = useState();
   const selectedData = "祝福你的人生充满爱、和平和幸福！";
@@ -57,7 +59,7 @@ export default function CustermoInput(props) {
 
   //字数统计
   // const [inputWishValue, setInputWishValue] = useState('');
-  const MAX_LENGTH = 70;
+  const MAX_LENGTH = 100;//70->100
   const MAX_NAME_LENGTH = 24;
   const inputWish = (event) => {
     let newText = event.target.value;
@@ -115,6 +117,14 @@ export default function CustermoInput(props) {
   const checkingInput = () => {
     let result = false;
     if (isEmpty(name) || isEmpty(text)) {
+      if(isEmpty(name) && isEmpty(text)){
+       setPopWording('please input your name and thoughts');
+      }else if (isEmpty(name)){
+        setPopWording('please input your name');
+
+      }else{
+        setPopWording('please share your thoughts');
+      }
       result = true;
     }
     return result;
@@ -437,7 +447,7 @@ export default function CustermoInput(props) {
       >
         <span className="InputPopWording" onClick={closeInputPop}>
           <div className="InputPopReminderWording">
-            Please share your thoughts
+            {popWording}
           </div>
         </span>
       </div>

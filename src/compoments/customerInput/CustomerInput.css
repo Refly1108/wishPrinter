@@ -645,7 +645,7 @@
 .inputBackground .InputPopWording {
   box-sizing: border-box;
   position: absolute;
-  width: 78vw;
+  width: 80vw;
   height: 50px;
   text-align: center;
   display: flex;
@@ -660,12 +660,12 @@
 .inputBackground .InputPopWording .InputPopReminderWording {
   /* 请输入你的名字和心愿哦 */
   position: absolute;
-  width: 300px;
+  width: 400px;
   height: 36px;
   font-family: 'PingFang HK';
   font-style: normal;
   font-weight: 400;
-  font-size: 20px;
+  font-size: 18px;
   line-height: 36px;
   /* identical to box height, or 180% */
   text-align: center;
