@@ -20,13 +20,34 @@
   /* identical to box height */
   color: #0F3A60;
 }
+.inputBackground .address {
+  /* 请输入你的愿望 */
+  background: none;
+  border: none;
+  color: blue;
+  cursor: pointer;
+  text-decoration: none;
+  position: absolute;
+  height: 20px;
+  width: 75vw;
+  padding-left: 13vw;
+  top: 24vh;
+  font-family: 'PingFang HK';
+  font-style: normal;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 20px;
+  /* identical to box height */
+  /* text-decoration-line: underline; */
+  color: #0F3A60;
+}
 .inputBackground .nametextarea {
   box-sizing: border-box;
   position: absolute;
   width: 74vw;
   height: 38px;
   resize: none;
-  margin-top: 21vh;
+  margin-top: 17vh;
   margin-left: 13vw;
   background: rgba(255, 255, 255, 0.4);
   border: 1px solid rgba(15, 58, 96, 0.31);
@@ -87,7 +108,7 @@
   box-sizing: border-box;
   position: absolute;
   width: 74vw;
-  height: 28vh;
+  height: 22vh;
   resize: none;
   margin-top: 31vh;
   margin-left: 13vw;
@@ -108,7 +129,7 @@
   position: absolute;
   height: 19px;
   right: 15vw;
-  bottom: 42vh;
+  bottom: 48vh;
   font-family: 'Roboto';
   font-style: normal;
   font-weight: 400;
@@ -118,6 +139,27 @@
   color: #0F3A60;
 }
 .inputBackground .ChatGPTbtn {
+  /* 没有头绪？问问ChatGPT吧 */
+  background: none;
+  border: none;
+  color: blue;
+  cursor: pointer;
+  text-decoration: none;
+  position: absolute;
+  height: 20px;
+  padding-left: 13vw;
+  bottom: 42vh;
+  font-family: 'PingFang HK';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  /* identical to box height */
+  text-decoration-line: underline;
+  color: #0F3A60;
+}
+
+.inputBackground .addressbtn {
   /* 没有头绪？问问ChatGPT吧 */
   background: none;
   border: none;

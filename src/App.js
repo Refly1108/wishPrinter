@@ -12,6 +12,7 @@ export const PageRouterContext = React.createContext(pageRouter);
 function App() {
   const [target, setTaget] = useState({ id: "", data: {} });
   const [username, setUsername] = useState("");
+  const [userInfo, setUserInfo] = useState("");
   const [useradd, setUseradd] = useState("");
   const changeRoute = (route) => {
     setTaget((target) => ({
@@ -53,6 +54,8 @@ function App() {
               setUsername={setUsername}
               useradd={useradd}
               setUseradd={setUseradd}
+              setUserInfo = {setUserInfo}
+              userInfo = {userInfo}
             ></Compoment>
             {/* </Provider> */}
           </PageRouterContext.Provider>

@@ -2,7 +2,7 @@ import React from 'react';
 
 function ChatGPT(props) {
     return (
-        <button className="ChatGPTbtn" onClick={props.onClick}>
+        <button className={props.className} onClick={props.onClick}>
             <u>{props.label}</u>
         </button>
     );

@@ -24,7 +24,7 @@ export default function Welcome(props) {
   };
 
   const checkPlay = async () => {
-   
+    
     navigateTo(changeRoute, config.pages.input);
   };
  
@@ -36,7 +36,7 @@ export default function Welcome(props) {
       (async () => {
         //TEST
       //  console.log();
-      // await configWeixin();
+      await configWeixin();
      
         //TEST
         if(getQueryString("code")){
@@ -44,6 +44,7 @@ export default function Welcome(props) {
       //  console.log('useinfo'+useinfo)
         if (useinfo.nickname) {
           props.setUsername(useinfo.nickname);
+          props.setUserInfo(useinfo);
           // let add = await getLocationAdds(useinfo.nickname);
           // props.setUseradd(add);
         }else{

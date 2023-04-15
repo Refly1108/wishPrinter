@@ -16,7 +16,7 @@ import leaf from "../../resource/leaf.PNG";
 import logo from "../../resource/logo1.0.png";
 import config from "../../config/config";
 import { postToServer } from "../../fetch/index";
-import {saveAddress} from '../../fetch/weixin'
+import {saveAddress,getLocationAdds} from '../../fetch/weixin'
 import { getQueryString } from "../../util/util";
 import { getRandomWish ,isEmpty} from "../../util/util";
 import wishs from "../../config/wishs";
@@ -33,6 +33,8 @@ export default function CustermoInput(props) {
   //Refly faild pop
   const [displayPrintFailed, setDisplayPrintFailed] = useState(false);
   const [displayInputPop, setDisplayInputPop] = useState(false);
+
+    const [address, setAddress] = useState("");
   //Add for chatGPT
   const [displayPrintForth, setDisplayPrintForth] = useState(false);
   const [ChatGPTdata, setChatGPTData] = useState();
@@ -228,6 +230,8 @@ export default function CustermoInput(props) {
         wish: text,
         printerId: type? type:1,
         copy:copy,
+        address:address,
+        headImgUrl:props.userInfo.headImgUrl
       });
     console.log(result);
    // await saveAddress(props.username?props.username:'壹.零er',props.useradd?props.useradd:"null");
@@ -242,7 +246,11 @@ export default function CustermoInput(props) {
   const navigateTo = (changeRoute, id) => {
     changeRoute({ id: id });
   };
-
+  
+  const setAdd = async () => {
+    let add = await getLocationAdds(props.username);
+     setAddress(add);
+  };
   const home = () => {
     navigateTo(changeRoute, config.pages.welcome);
   };
@@ -262,7 +270,7 @@ export default function CustermoInput(props) {
     <div className="inputBackground">
       <div className="inputNameTitle"> </div>
       <textarea className = "nametextarea" type="text" placeholder="请输入你的名字" value={name} onChange={inputName}></textarea>
-      
+      <div className="address">{address}</div>
       <textarea className = "wishtextarea" type="text" placeholder="请输入你的心愿" value={text} onChange={inputWish}></textarea>
       {/* <div className="inputWishTitle">请输入你的愿望</div> */}
       {/* <textarea type="text" value={text} onChange={inputWish}></textarea> */}
@@ -275,6 +283,11 @@ export default function CustermoInput(props) {
         className="ChatGPTbtn"
         label="没有头绪？问问ChatGPT吧"
         onClick={ChatGPTPrint}
+      />
+       <ChatGPT
+        className="addressbtn"
+        label="添加地址"
+        onClick={setAdd}
       />
       <Button
         variant="contained"
