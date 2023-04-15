@@ -130,18 +130,22 @@ export default function CustermoInput(props) {
     return result;
   };
 
-  const printWish = () => {
+  const printWish = async() => {
     if (checkingInput()) {
       console.log("can not be null");
+      
+    //  await printingWish2();
       inputCheckPop();
     } else {
-      setDisplayMask(true);
-      setDisplayPrintFirst(true);
-      setDisplayPrintSecond(false);
-      setDisplayPrintThird(false);
-      //打印逻辑
-      setDisplayPrintForth(false);
-      setDisplayPrintFailed(false);
+//change to printer d
+      await printingWish2();
+      // setDisplayMask(true);
+      // setDisplayPrintFirst(true);
+      // setDisplayPrintSecond(false);
+      // setDisplayPrintThird(false);
+      // //打印逻辑
+      // setDisplayPrintForth(false);
+      // setDisplayPrintFailed(false);
     }
   };
 
@@ -307,6 +311,7 @@ export default function CustermoInput(props) {
         className="printWish"
         tabIndex="2"
         onClick={printWish}
+        //onClick={printingWish2}
       >
         <span className="btnPrintWording">Print my idea</span>
       </Button>
