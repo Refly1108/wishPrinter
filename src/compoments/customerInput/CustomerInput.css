@@ -645,13 +645,13 @@
 .inputBackground .InputPopWording {
   box-sizing: border-box;
   position: absolute;
-  width: 82vw;
+  width: 84vw;
   height: 50px;
   text-align: center;
   display: flex;
   justify-content: center;
   align-items: center;
-  left: 9vw;
+  left: 8vw;
   bottom: 55vh;
   background: rgba(0, 0, 0, 0.5);
   border-radius: 8px;
